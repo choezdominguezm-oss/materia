@@ -1,0 +1,516 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Portal Tecnologías Emergentes</title>
+  <!-- Materialize CSS -->
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <style>
+    body {
+      font-family: 'Roboto', sans-serif;
+      background-color: #f5f5f5;
+    }
+	 /* Tarjetas del equipo */
+    .team-card {
+      transition: transform 0.3s, box-shadow 0.3s;
+      border-radius: 10px;
+      overflow: hidden;
+      height: 100%;
+    }
+    .team-card:hover {
+      transform: translateY(-10px);
+      box-shadow: 0 12px 20px rgba(0,0,0,0.25);
+    }
+    .team-img {
+      width: 100%;
+      height: 250px;
+      object-fit: cover;
+      border-top-left-radius: 10px;
+      border-top-right-radius: 10px;
+    }
+
+    .row {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+    }
+
+    h2.header {
+      color: #1565c0;
+      border-bottom: 2px solid #1565c0;
+      padding-bottom: 5px;
+      margin-bottom: 25px;
+    }
+
+    section {
+      padding: 50px 0;
+    }
+
+    .responsive-embed {
+      position: relative;
+      padding-bottom: 56.25%;
+      height: 0;
+      overflow: hidden;
+      border-radius: 10px;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+      margin-bottom: 30px;
+    }
+
+    .responsive-embed iframe {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+    }
+
+    footer.page-footer {
+      padding-top: 20px;
+      padding-bottom: 20px;
+    }
+
+    table.striped {
+      background: #fff;
+      border-radius: 10px;
+      overflow: hidden;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    }
+
+    .input-field input:focus + label {
+      color: #1565c0 !important;
+    }
+    .input-field input:focus {
+      border-bottom: 1px solid #1565c0 !important;
+      box-shadow: 0 1px 0 0 #1565c0 !important;
+    }
+
+    
+    /* Encabezados */
+    h2.header {
+      color: #1565c0;
+      border-bottom: 2px solid #1565c0;
+      padding-bottom: 5px;
+      margin-bottom: 25px;
+    }
+
+    /* Secciones separadas */
+    section {
+      padding: 50px 0;
+    }
+
+    /* Videos responsivos */
+    .responsive-embed {
+      position: relative;
+      padding-bottom: 56.25%;
+      height: 0;
+      overflow: hidden;
+      border-radius: 10px;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+      margin-bottom: 30px;
+    }
+    .responsive-embed iframe {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+    }
+
+    /* Footer */
+    footer.page-footer {
+      padding-top: 20px;
+      padding-bottom: 20px;
+    }
+
+    /* Tablas */
+    table.striped {
+      background: #fff;
+      border-radius: 10px;
+      overflow: hidden;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    }
+
+    /* Formularios */
+    .input-field input:focus + label {
+      color: #1565c0 !important;
+    }
+    .input-field input:focus {
+      border-bottom: 1px solid #1565c0 !important;
+      box-shadow: 0 1px 0 0 #1565c0 !important;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Navbar -->
+  <nav class="blue darken-2">
+    <div class="nav-wrapper container">
+      <a href="#main" class="brand-logo">Tecnologías Emergentes</a>
+      <a href="#" data-target="mobile-demo" class="sidenav-trigger"><i class="material-icons">menu</i></a>
+      <ul class="right hide-on-med-and-down">
+        <li><a href="#main">Inicio</a></li>
+        <li><a href="#seccion-ia">IA</a></li>
+        <li><a href="#seccion-machine">Machine Learning</a></li>
+        <li><a href="#seccion-tecnologia-emergentes">Tecnologías</a></li>
+        <li><a href="#seccion-tendencias">Tendencias 2025</a></li>
+        <li><a href="#contacto">Contacto</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <ul class="sidenav" id="mobile-demo">
+    <li><a href="#main">Inicio</a></li>
+    <li><a href="#seccion-ia">IA</a></li>
+    <li><a href="#seccion-machine">Machine Learning</a></li>
+    <li><a href="#seccion-tecnologia-emergentes">Tecnologías</a></li>
+    <li><a href="#seccion-tendencias">Tendencias 2025</a></li>
+    <li><a href="#contacto">Contacto</a></li>
+  </ul>
+
+  <main class="container" id="main">
+
+    <!-- Introducción -->
+    <section id="introduccion">
+      <h2 class="header">¡Bienvenidos!</h2>
+      <p>Explora Inteligencia Artificial, Machine Learning y tecnologías emergentes que transforman el 2025. Encuentra artículos, vídeos y recursos educativos.</p>
+      <img src="imagen/tendencias-tecnologicas.jpg" alt="internet y ia" class="responsive-img z-depth-2" style="border-radius:10px;">
+    </section>
+
+    <!-- Equipo -->
+    <section id="equipo">
+      <h2 class="header center-align">Nuestro Equipo</h2>
+      <div class="row">
+        <!-- Integrantes (7) -->
+        <div class="col s12 m6 l4 row">
+		<div class="card team-card">
+			<div class="card-image">
+				<img src="imagen/karla.jpg" alt="Foto de Karla Ivette Chóez Muñiz" width="250" height="250" loading="lazy">
+	</div>
+	<div class="card-content">
+		<span class="card-title center-align">
+		<strong>Karla Ivette Chóez Muñiz</strong>
+	</span>
+		<p>Directora en investigación y edición de imágenes.</p>
+		</div>
+	</div>
+</div>
+        <div class="col s12 m6 l4 row">
+		<div class="card team-card">
+			<div class="card-image">
+				<img src="imagen/mayerly.jpg" alt=" Foto Mayerly Maylee Chóez Domínguez" width="250" height="250" loading="lazy">
+	</div>
+		<div class="card-content">
+			<span class="card-title center-align">
+				<strong>Mayerly Maylee Chóez Domínguez</strong>
+			</span>
+				<p>Encargada de la estructura HTML.</p>
+		</div>
+	</div>
+</div>
+        <div class="col s12 m6 l4 row">
+		<div class="card team-card">
+			<div class="card-image">
+				<img src="imagen/gabriel.jpg" alt="Foto de Gabriel Romario Mendoza Barzallo" width="250" height="250" loading="lazy">
+	</div>
+		<div class="card-content">
+			<span class="card-title center-align">
+				<strong>Gabriel Romario Mendoza Barzallo</strong>
+			</span>
+				<p>Encargado de optimización del sitio web.</p>
+		</div>
+	</div>
+</div>
+        <div class="col s12 m6 l4 row">
+		<div class="card team-card">
+			<div class="card-image">
+				<img src="imagen/andres.jpg" alt="Foto de Andres Abel Mendoza Barzallo" width="250" height="250" loading="lazy">
+		</div>
+			<div class="card-content">
+				<span class="card-title center-align">
+					<strong>Andres Abel Mendoza Barzallo</strong>
+				</span>
+					<p>Apoyo en investigación y edición.</p>
+			</div>
+		</div>
+	</div>
+        
+	<div class="col s12 m6 l4 row">
+		<div class="card team-card">
+			<div class="card-image">
+				<img src="imagen/jean.jpg" alt="Foto de Jean Pierre Torres Guilindro" width="250" height="250" loading="lazy">		
+			</div>
+			<div class="card-content">
+				<span class="card-title center-align">
+					<strong>Jean Pierre Torres Guilindro</strong>
+				</span>
+					<p>Encargado de Machine Learning.</p>
+			</div>
+		</div>
+	</div>
+        <div class="col s12 m6 l4 row">
+		<div class="card team-card">
+			<div class="card-image">
+				<img src="imagen/ana.jpg" alt="Foto de Ana Estefanía Guanotuña" width="250" height="250" loading="lazy">
+		</div>
+			<div class="card-content">
+				<span class="card-title center-align">
+					<strong>Ana Estefanía Guanotuña Pazmiño</strong>
+				</span>
+					<p>Responsable IA y contenidos técnicos.</p>
+			</div>
+		</div>
+	</div>
+        <div class="col s12 m6 l4 row">
+		<div class="card team-card">
+			<div class="card-image">
+				<img src="imagen/samantha.jpg" alt="Foto de Arianna Samantha Matute Carbo" width="250" height="250" loading="lazy">
+			</div>
+				<div class="card-content">
+					<span class="card-title center-align">
+						<strong>Arianna Samantha Matute Carbo</strong>
+					</span>
+						<p>Encargada del aspecto visual y psicología del color.</p>
+			</div>
+		</div>
+	</div>
+      </div>
+    </section>
+
+    <!-- Inteligencia Artificial -->
+    <section id="seccion-ia">
+      <h2 class="header">Inteligencia Artificial (IA)</h2>
+      <div class="row">
+        <div class="col s12 m6">
+          <p>La IA permite que las máquinas realicen tareas que requieren inteligencia humana: percibir, razonar, decidir y ejecutar acciones.</p>
+          <ul class="collection z-depth-1">
+            <li class="collection-item"><strong>Percibir</strong>: captar información del entorno.</li>
+            <li class="collection-item"><strong>Razonar y procesar</strong>: interpretar datos y aprender.</li>
+            <li class="collection-item"><strong>Tomar decisiones</strong>: ejecutar acciones inteligentes.</li>
+          </ul>
+        </div>
+        <div class="col s12 m6 center-align">
+          <img src="imagen/IA.png" alt="Ilustración IA" class="responsive-img z-depth-2" style="border-radius:10px;">
+        </div>
+      </div>
+      <h4>Tipos de IA</h4>
+      <table class="striped responsive-table">
+        <thead>
+          <tr>
+            <th>IA Débil (ANI)</th>
+            <th>IA General (AGI)</th>
+            <th>Superinteligencia (ASI)</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>Actual, realiza tareas específicas sin conciencia.</td>
+            <td>Hipotética, capaz de resolver cualquier problema como un humano.</td>
+            <td>Hipotética, supera inteligencia humana en todos los aspectos.</td>
+          </tr>
+        </tbody>
+      </table>
+    </section>
+
+    <!-- Machine Learning -->
+    <section id="seccion-machine">
+      <h2 class="header">Machine Learning</h2>
+      <div class="row">
+        <div class="col s12 m6">
+          <p>Rama de la IA que permite a las máquinas aprender de datos sin programación explícita.</p>
+          <ul class="collection z-depth-1">
+            <li class="collection-item"><strong>Supervisado</strong>: aprende con datos etiquetados.</li>
+            <li class="collection-item"><strong>No supervisado</strong>: encuentra patrones en datos sin etiquetar.</li>
+            <li class="collection-item"><strong>Por refuerzo</strong>: aprende mediante prueba y error con recompensas.</li>
+          </ul>
+        </div>
+        <div class="col s12 m6 center-align">
+          <img src="imagen/Machine_Learning.jpg" alt="ML" class="responsive-img z-depth-2" style="border-radius:10px;">
+        </div>
+      </div>
+    </section>
+
+    <!-- Tecnologías Emergentes -->
+    <section id="seccion-tecnologia-emergentes">
+      <h2 class="header">Tecnologías Emergentes</h2>
+      <div class="row">
+        <div class="col s12 m6">
+          <h5>Realidad Virtual / Aumentada</h5>
+          <img src="imagen/REALIDAD_VIRTUAL.png" alt="RV/RA" class="responsive-img z-depth-2" style="border-radius:10px;">
+          <table class="striped responsive-table">
+            <thead>
+              <tr><th>RV</th><th>RA</th></tr>
+            </thead>
+            <tbody>
+              <tr><td>Mundo virtual simulado.</td><td>Superpone elementos virtuales sobre el real.</td></tr>
+            </tbody>
+          </table>
+        </div>
+        <div class="col s12 m6">
+          <h5>Blockchain</h5>
+          <img src="imagen/BLOCKCHAIN.png" alt="Blockchain" class="responsive-img z-depth-2" style="border-radius:10px;">
+          <table class="striped responsive-table">
+            <thead>
+              <tr><th>Qué es</th><th>Cómo funciona</th></tr>
+            </thead>
+            <tbody>
+              <tr><td>Libro contable digital, seguro e inmutable.</td><td>Organizado en bloques enlazados criptográficamente.</td></tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+
+      <h5>Internet de las Cosas (IoT)</h5>
+      <div class="responsive-embed">
+        <iframe src="https://www.youtube.com/embed/fWrY571yHYI" title="Video IoT" allowfullscreen></iframe>
+      </div>
+    </section>
+
+    <!-- Tendencias 2025 -->
+    <section id="seccion-tendencias">
+      <h2 class="header">Tendencias 2025</h2>
+      <table class="striped responsive-table">
+        <thead>
+          <tr>
+            <th>Agentes de IA</th><th>Computación cuántica</th><th>Realidad Extendida</th><th>Ciberseguridad IA</th><th>IoT + 5G/6G</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>IA autónoma que planifica y razona.</td>
+            <td>Aceleración en simulaciones y procesamiento de datos.</td>
+            <td>Integración de RV, RA y Mixta en formación y comercio.</td>
+            <td>IA detecta anomalías y amenazas.</td>
+            <td>Conectividad ultrarrápida para ciudades inteligentes.</td>
+          </tr>
+        </tbody>
+      </table>
+      <div class="responsive-embed">
+        <iframe src="https://www.youtube.com/embed/CpSvDAe5zZU" title="Tendencias 2025" allowfullscreen></iframe>
+      </div>
+    </section>
+
+    <!-- Contacto -->
+      <section id="contacto" class="section">
+      <div class="container">
+        <h2 class="header center-align">Contáctanos</h2>
+        <div class="row">
+
+          <!-- FORMULARIO -->
+          <div class="col s12 m6">
+            <div class="card z-depth-2">
+              <div class="card-content">
+                <span class="card-title blue-text text-darken-2">Envíanos un mensaje</span>
+                <form id="contactForm">
+                  <div class="input-field">
+                    <input id="name" type="text" required>
+                    <label for="name">Nombre completo</label>
+                  </div>
+                  <div class="input-field">
+                    <input id="email" type="email" required>
+                    <label for="email">Correo electrónico</label>
+                  </div>
+                  <div class="input-field">
+                    <input id="subject" type="text">
+                    <label for="subject">Asunto</label>
+                  </div>
+                  <div class="input-field">
+                    <textarea id="message" class="materialize-textarea" required></textarea>
+                    <label for="message">Mensaje</label>
+                  </div>
+                  <div class="center">
+                    <button type="submit" class="btn blue darken-2 waves-effect waves-light">
+                      <i class="material-icons left">send</i>Enviar
+                    </button>
+                    <button type="reset" id="clearBtn" class="btn grey lighten-1 black-text waves-effect">
+                      <i class="material-icons left">clear</i>Limpiar
+                    </button>
+                  </div>
+                  <p id="formMessage" class="center-align small" style="margin-top:10px;"></p>
+                </form>
+              </div>
+            </div>
+          </div>
+
+          <!-- INFORMACIÓN DE CONTACTO -->
+          <div class="col s12 m6">
+            <div class="card z-depth-2">
+              <div class="card-content">
+                <span class="card-title blue-text text-darken-2">Información de contacto</span>
+                <ul class="collection">
+                  <li class="collection-item"><i class="material-icons left">email</i> info@proyectoweb.com</li>
+                  <li class="collection-item"><i class="material-icons left">phone</i> +593 9 8765 4321</li>
+                  <li class="collection-item"><i class="material-icons left">location_on</i> Av. Principal 123, Ciudad, País</li>
+                </ul>
+
+                <h6 class="blue-text">Horario de atención</h6>
+                <p>Lunes a Viernes — 09:00 a 17:00</p>
+
+                <h6 class="blue-text">Ubicación</h6>
+                <div class="card-image">
+                  <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3976.987654321!2d-78.46789!3d-0.234567!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x123456789abcdef!2sUbicacion!5e0!3m2!1ses!2sec!4v1695970000000!5m2!1ses!2sec" 
+                style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade" 
+                    width="100%" height="250" style="border:0;" allowfullscreen="" loading="lazy">
+                  </iframe>
+                </div>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- FOOTER -->
+  <footer class="page-footer blue darken-2">
+    <div class="container center-align">
+      <p class="white-text">© 2025 Portal de Tecnologías Emergentes</p>
+      <p class="white-text">Desarrollado por Grupo 2</p>
+      <p><a class="white-text" href="#main">Volver al inicio</a></p>
+    </div>
+  </footer>
+
+  </main>
+
+<!-- Materialize JS -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+  <script>
+    document.addEventListener('DOMContentLoaded', function() {
+      var elems = document.querySelectorAll('.sidenav');
+      M.Sidenav.init(elems);
+    });
+
+    // Script formulario
+    const contactForm = document.getElementById('contactForm');
+    const formMessage = document.getElementById('formMessage');
+
+    contactForm.addEventListener('submit', (e) => {
+      e.preventDefault();
+      const name = document.getElementById('name').value.trim();
+      const email = document.getElementById('email').value.trim();
+      const subject = document.getElementById('subject').value.trim() || 'Contacto desde sitio web';
+      const message = document.getElementById('message').value.trim();
+
+      if (!name || !email || !message) {
+        formMessage.textContent = '⚠️ Por favor completa los campos requeridos.';
+        formMessage.className = 'red-text';
+        return;
+      }
+
+      const to = 'info@proyectoweb.com';
+      const body = `Nombre: ${name}\nCorreo: ${email}\n\n${message}`;
+      const mailto = `mailto:${to}?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
+      window.open(mailto, '_blank');
+
+      formMessage.textContent = '✅ Se abrió tu cliente de correo. Si no, envía el mensaje manualmente a info@proyectoweb.com';
+      formMessage.className = 'green-text';
+    });
+  </script>
+
+
+  
+</body>
+</html>
